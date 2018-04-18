@@ -101,143 +101,21 @@
           <div class="col-lg-8 mx-auto">
             <h2>Program</h2>
             <p>Thirteen thematic scientific sessions are planned during the four conference days. More datais will be announced soon.</p>
-            <table class="table-dark table-bordered">
-  <tbody>
-    <tr>
-      <th scope="row">May 23 (Wednesday)</th>
-      <td></td>
-    </tr>
-    <tr>
-      <td scope="row">13:30-15:00</td>
-      <td>Registration</td>
-    </tr>
-    <tr>
-      <td scope="row">15:00-15:10</td>
-      <td>Opening</td>
-    </tr>
-    <tr>
-      <td scope="row"></td>
-      <td></td>
-    </tr>
- 
-    <tr>
-      <th scope="row">Session 1</th>
-      <th>Glycocalyx</th>
-    </tr>
-    <tr>
-      <td scope="row">15:10-16:00</td>
-      <td>B.J. Kirby</td>
-      <td>TBA</td>
-    </tr>
-    <tr>
-      <td scope="row">16:00-16:30</td>
-      <td>M. Ingr</td>
-      <td>Binding of hyaluronan and its neutral analog by TSG-6 protein studied by molecular dynamics</td>
-    </tr>
-    <tr>
-      <td scope="row">16:30-16:45</td>
-      <td>V. Palivec</td>
-      <td>TBA</td>
-    </tr>
-    <tr>
-      <td scope="row">16:45-17:00</td>
-      <td>J. Vuorio</td>
-      <td>Atomistic Fingerprint of CD44—Hyaluronan Interplay</td>
-    </tr>
+            <div class="btn-group" role="group" aria-label="Conference program">
+              <button id="b23" type="button" class="btn btn-outline-light">23th May</button>
+              <button id="b24" type="button" class="btn btn-outline-light">24th May</button>
+              <button id="b25" type="button" class="btn btn-outline-light">25th May</button>
+              <button id="b26" type="button" class="btn btn-outline-light">26th May</button>
+              <button id="bprogram" type="button" class="btn btn-link"> Full Program</button>
+            </div>
 
-    <tr>
-      <td scope="row"></td>
-      <td></td>
-    </tr>
-
-    <tr>
-      <th scope="row">Session 2</th>
-      <th>Oxidized lipids</th>
-    </tr>
-    <tr>
-      <td scope="row">17:00-17:30</td>
-      <td>M. Vazdar</td>
-      <td>Chemical Reactions in Phospholipid Bilayers and Their Relevance to Membrane Biophysics</td>
-    </tr>
-    <tr>
-      <td scope="row">17:30-17:45</td>
-      <td>P. Jurkiewicz</td>
-      <td>TBA</td>
-    </tr>
-    <tr>
-      <td scope="row">17:45-18:00</td>
-      <td>W. Kulig</td>
-      <td>TBA</td>
-    </tr>
-
-    <tr>
-      <td scope="row"></td>
-      <td></td>
-    </tr>
-
-    <tr>
-      <td scope="row">18:00-18:30</td>
-      <td>Coffee</td>
-    </tr>
-
-    <tr>
-      <td scope="row"></td>
-      <td></td>
-    </tr>
-    
-    <tr>
-      <th scope="row">Session 3</th>
-      <th>Membrane proteins</th>
-    </tr>
-    <tr>
-      <td scope="row">18:30-19:00</td>
-      <td>R. Ettrich</td>
-      <td>TBA</td>
-    </tr>
-    <tr>
-      <td scope="row">19:00-19:30</td>
-      <td>J. Lazar</td>
-      <td>Advances in understanding of optical properties of fluorescent proteins</td>
-    </tr>
-    <tr>
-      <td scope="row">19:30-19:45</td>
-      <td>TBA</td>
-      <td>TBA</td>
-    </tr>
-    <tr>
-      <td scope="row">19:45-20:00</td>
-      <td>TBA</td>
-      <td>TBA</td>
-    </tr>
-    
-    <tr>
-      <td scope="row"></td>
-      <td></td>
-      
-    </tr>
-
-    <tr>
-      <td scope="row">20:00-21:00</td>
-      <td>Dinner</td>
-    </tr>
-
-    <tr>
-      <td scope="row"></td>
-      <td></td>
-    </tr>
-
-    <tr>
-      <td scope="row">21:00-23:00</td>
-      <td>Discussion</td>
-    </tr>
-    
-    
-
-  </tbody>
-</table>
-
-
+            <div id="day23" w3-include-html="conference_program/day23.html"> </div>
+            <div id="day24" w3-include-html="conference_program/day24.html"> </div>
+            <div id="day25" w3-include-html="conference_program/day25.html"> </div>
+            <div id="day26" w3-include-html="conference_program/day26.html"> </div>
+            <a href="conference_program/NoveHrady-conference_program.pdf">(pdf)</a>
           </div>
+
         </div>
       </div>
     </section>
@@ -287,7 +165,7 @@ https://goo.gl/maps/6WzTCVLmyU42
       </div>
     </section>
 
-    
+
     <!-- Footer -->
     <footer>
       <div class="container text-center">
@@ -304,6 +182,87 @@ https://goo.gl/maps/6WzTCVLmyU42
 
     <!-- Custom scripts for this template -->
     <script src="js/grayscale.min.js"></script>
+
+    <script>
+      var t23 = document.getElementById("day23")
+      var t24 = document.getElementById("day24")
+      var t25 = document.getElementById("day25")
+      var t26 = document.getElementById("day26")
+
+      t23.style.display = "none" ;
+      t24.style.display = "none";
+      t25.style.display = "none";
+      t26.style.display = "none";
+
+      document.getElementById("b23").onclick = function (){
+        t23.style.display = "block" ;
+        t24.style.display = "none";
+        t25.style.display = "none";
+        t26.style.display = "none";
+      }
+
+      document.getElementById("b24").onclick = function (){
+        t23.style.display = "none" ;
+        t24.style.display = "block";
+        t25.style.display = "none";
+        t26.style.display = "none";
+      }
+
+      document.getElementById("b25").onclick = function (){
+        t23.style.display = "none" ;
+        t24.style.display = "none";
+        t25.style.display = "block";
+        t26.style.display = "none";
+      }
+
+      document.getElementById("b26").onclick = function (){
+        t23.style.display = "none" ;
+        t24.style.display = "none";
+        t25.style.display = "none";
+        t26.style.display = "block";
+      }
+
+      document.getElementById("bprogram").onclick = function (){
+        t23.style.display = "block" ;
+        t24.style.display = "block";
+        t25.style.display = "block";
+        t26.style.display = "block";
+      }
+    </script>
+
+    <script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /*exit the function:*/
+          return;
+        }
+      }
+    };
+    </script>
+
+    <script>
+      includeHTML();
+    </script>
 
   </body>
 
