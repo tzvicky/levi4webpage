@@ -198,12 +198,13 @@
       var t25 = document.getElementById("day25")
       var t26 = document.getElementById("day26")
 
-      t23.style.display = "none" ;
-      t24.style.display = "none";
-      t25.style.display = "none";
-      t26.style.display = "none";
+
 
       document.getElementById("b23").onclick = function (){
+        $('#b23').button('toggle');
+        $('#b24').removeClass("active");
+        $('#b25').removeClass("active");
+        $('#b26').removeClass("active");
         t23.style.display = "block" ;
         t24.style.display = "none";
         t25.style.display = "none";
@@ -211,6 +212,10 @@
       }
 
       document.getElementById("b24").onclick = function (){
+        $('#b23').removeClass("active");
+        $('#b24').button('toggle');
+        $('#b25').removeClass("active");
+        $('#b26').removeClass("active");
         t23.style.display = "none" ;
         t24.style.display = "block";
         t25.style.display = "none";
@@ -218,6 +223,10 @@
       }
 
       document.getElementById("b25").onclick = function (){
+        $('#b23').removeClass("active");
+        $('#b24').removeClass("active");
+        $('#b25').button('toggle');
+        $('#b26').removeClass("active");
         t23.style.display = "none" ;
         t24.style.display = "none";
         t25.style.display = "block";
@@ -225,6 +234,10 @@
       }
 
       document.getElementById("b26").onclick = function (){
+        $('#b23').removeClass("active");
+        $('#b24').removeClass("active");
+        $('#b25').removeClass("active");
+        $('#b26').button('toggle');
         t23.style.display = "none" ;
         t24.style.display = "none";
         t25.style.display = "none";
@@ -232,11 +245,24 @@
       }
 
       document.getElementById("bprogram").onclick = function (){
+        $('#b23').removeClass("active");
+        $('#b24').removeClass("active");
+        $('#b25').removeClass("active");
+        $('#b26').removeClass("active");
         t23.style.display = "block" ;
         t24.style.display = "block";
         t25.style.display = "block";
         t26.style.display = "block";
       }
+
+      window.onload = function() {
+        //document.getElementById("b23").focus();
+        $('#b23').button('toggle');
+        t23.style.display = "block";
+        t24.style.display = "none";
+        t25.style.display = "none";
+        t26.style.display = "none";
+      };
     </script>
 
     <script>
