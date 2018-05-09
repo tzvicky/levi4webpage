@@ -100,7 +100,7 @@
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <h2>Program</h2>
-            <p>Thirteen thematic scientific sessions are planned during the four conference days. <a href="conference_program/NoveHrady-conference_program.pdf">(pdf)</a></p>
+            <p>Thirteen thematic scientific sessions are planned during the four conference days. <a href="conference_program/NoveHrady-conference_program.pdf">(Program - pdf)</a> ---- <a href="conference_program/NoveHrady-conference_abstracts.pdf">(Book of abstracts - pdf)</a></p>
             <div class="btn-group" role="group" aria-label="Conference program">
               <button id="b23" type="button" class="btn btn-outline-light">23th May</button>
               <button id="b24" type="button" class="btn btn-outline-light">24th May</button>
@@ -127,9 +127,9 @@
           <div class="col-lg-8 mx-auto">
             <h2>Venue</h2>
             <h4>Venue information</h4>
-            <p>The conferecne will take place in The Center for Nanobiology and Structural Biology of the Czech Academy of Sciences in Nové Hrady, Czech Republic <a href="https://goo.gl/maps/6WzTCVLmyU42">(map)</a>.</p>
+            <p>The conference will take place in The Center for Nanobiology and Structural Biology of the Czech Academy of Sciences in Nové Hrady, Czech Republic <a href="https://goo.gl/maps/6WzTCVLmyU42">(map)</a>.</p>
             <h4>Travel information</h4>
-            <p>Nové Hrady and the conference site can be accessed from České Budějovice using a bus. České Budějovice are conviniently accessible from Prague via train.</p>
+            <p>Nové Hrady and the conference site can be accessed from České Budějovice using a bus. České Budějovice are conveniently accessible from Prague via train.</p>
           </div>
         </div>
       </div>
@@ -157,8 +157,8 @@
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <h2>Organizers</h2>
-            <p>Dr. Hector Martinez-Seara (Institute of Organic Chmistry and Biochemistry, Czech Academy of Science, Prague, Czech Republic)</p>
-            <p>Dr. Lukasz Cwiklik (J. Heyrovsky Institute of Physical Chmistry, Czech Academy of Science, Prague, Czech Republic)</p>
+            <p>Dr. Hector Martinez-Seara (Institute of Organic Chemistry and Biochemistry, Czech Academy of Science, Prague, Czech Republic)</p>
+            <p>Dr. Lukasz Cwiklik (J. Heyrovsky Institute of Physical Chemistry, Czech Academy of Science, Prague, Czech Republic)</p>
             <p>
               <a href="http://www.uochb.cz">
                 <img src="img/IOCB_logo.jpg" alt="IOCB" width="504" height="250">
@@ -166,7 +166,7 @@
             </p>
             <p>
               <a href="http://www.jh-inst.cas.cz">
-                <img src="img/Heyrovsky_logo.gif" alt="Heyrovsky Institute" width="504" height="250" style="background-color:white;">
+                <img src="img/Heyrovsky_logo.gif" alt="Heyrovsky Institute" width="504" height="200" style="background-color:white;">
               </a>
             </p>
           </div>
@@ -198,12 +198,13 @@
       var t25 = document.getElementById("day25")
       var t26 = document.getElementById("day26")
 
-      t23.style.display = "none" ;
-      t24.style.display = "none";
-      t25.style.display = "none";
-      t26.style.display = "none";
+
 
       document.getElementById("b23").onclick = function (){
+        $('#b23').button('toggle');
+        $('#b24').removeClass("active");
+        $('#b25').removeClass("active");
+        $('#b26').removeClass("active");
         t23.style.display = "block" ;
         t24.style.display = "none";
         t25.style.display = "none";
@@ -211,6 +212,10 @@
       }
 
       document.getElementById("b24").onclick = function (){
+        $('#b23').removeClass("active");
+        $('#b24').button('toggle');
+        $('#b25').removeClass("active");
+        $('#b26').removeClass("active");
         t23.style.display = "none" ;
         t24.style.display = "block";
         t25.style.display = "none";
@@ -218,6 +223,10 @@
       }
 
       document.getElementById("b25").onclick = function (){
+        $('#b23').removeClass("active");
+        $('#b24').removeClass("active");
+        $('#b25').button('toggle');
+        $('#b26').removeClass("active");
         t23.style.display = "none" ;
         t24.style.display = "none";
         t25.style.display = "block";
@@ -225,6 +234,10 @@
       }
 
       document.getElementById("b26").onclick = function (){
+        $('#b23').removeClass("active");
+        $('#b24').removeClass("active");
+        $('#b25').removeClass("active");
+        $('#b26').button('toggle');
         t23.style.display = "none" ;
         t24.style.display = "none";
         t25.style.display = "none";
@@ -232,11 +245,24 @@
       }
 
       document.getElementById("bprogram").onclick = function (){
+        $('#b23').removeClass("active");
+        $('#b24').removeClass("active");
+        $('#b25').removeClass("active");
+        $('#b26').removeClass("active");
         t23.style.display = "block" ;
         t24.style.display = "block";
         t25.style.display = "block";
         t26.style.display = "block";
       }
+
+      window.onload = function() {
+        //document.getElementById("b23").focus();
+        $('#b23').button('toggle');
+        t23.style.display = "block";
+        t24.style.display = "none";
+        t25.style.display = "none";
+        t26.style.display = "none";
+      };
     </script>
 
     <script>
